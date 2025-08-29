@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+    margin: 0;
+    padding-top: 50px;
+    color: #fff;
+    perspective: 800px; /* 3D uchun */
+}
+
+h1 {
+    max-width: 600px;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    text-shadow: 0 0 8px rgba(255,255,255,0.7);
+}
+
+button {
+    background: linear-gradient(145deg, #4a90e2, #357ABD);
+    border: none;
+    border-radius: 15px;
+    padding: 15px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #e0e7ff;
+    cursor: pointer;
+    box-shadow:
+        0 8px 15px rgba(72, 118, 255, 0.3),
+        inset 0 -3px 6px rgba(255,255,255,0.3),
+        inset 0 3px 6px rgba(0,0,0,0.2);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    transform-style: preserve-3d;
+}
+
+button:hover:not(:disabled) {
+    transform: translateZ(20px) scale(1.05);
+    box-shadow:
+        0 12px 20px rgba(72, 118, 255, 0.5),
+        inset 0 -3px 8px rgba(255,255,255,0.5),
+        inset 0 3px 8px rgba(0,0,0,0.3);
+}
+
+button:active:not(:disabled) {
+    transform: translateZ(10px) scale(1);
+    box-shadow:
+        0 4px 10px rgba(72, 118, 255, 0.4),
+        inset 0 -3px 6px rgba(255,255,255,0.4),
+        inset 0 3px 6px rgba(0,0,0,0.2);
+}
+
+button:disabled {
+    background: #555;
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+    color: #ccc;
+}
+
+.result {
+    margin-top: 40px;
+    font-size: 1.5rem;
+    color: #dde1ff;
+    max-width: 600px;
+    text-align: center;
+    white-space: pre-line;
+    padding: 20px;
+    border-radius: 20px;
+    background: linear-gradient(145deg, #334f8d, #1b2a55);
+    box-shadow:
+        6px 6px 15px #1a2550,
+        -6px -6px 15px #4668c4;
+    transform-style: preserve-3d;
+    user-select: none;
+}
+
+.info {
+    margin-top: 15px;
+    font-size: 1.1rem;
+    color: #b0c7ff;
+    max-width: 600px;
+    text-align: center;
+    text-shadow: 0 0 5px #4a6eff;
+}
